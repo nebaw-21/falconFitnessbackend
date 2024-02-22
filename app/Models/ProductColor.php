@@ -16,11 +16,11 @@ class ProductColor extends Model
     ];
     
     public function category():BelongsTo {
-        return $this->belongsTo(product::class, 'product_id');
+        return $this->belongsTo(Product::class, 'product_id');
     }
     
     public function sizes():HasMany{
-        return $this->hasMany(size::class,'product_color_id');
+        return $this->hasMany(Size::class,'product_color_id');
     }
     
     public function images():HasMany{
@@ -28,6 +28,6 @@ class ProductColor extends Model
     }
     
     public function colorName():HasOne{
-        return $this->hasOne(color::class,'color_id');
+        return $this->hasOne(Color::class,'color_id');
     }
 }

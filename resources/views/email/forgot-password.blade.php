@@ -26,7 +26,7 @@
     <p>
         If you're having trouble clicking the "Reset Password" button, copy and paste the URL below into your web browser:
         <br>
-        <a href="http://localhost:3000/reset/{{ $token }}">http://localhost:3000/reset?token={{ $token }}</a>
+        <a href="http://api4.awratech.com/reset/{{ $token }}">http://api4.awratech.com/reset?token={{ $token }}</a>
     </p>
     
     <p>Thank you!</p>

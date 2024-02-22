@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\color;
+use App\Models\Color;
 use Faker\Core\Color as CoreColor;
 use Faker\Provider\ar_EG\Color as Ar_EGColor;
 use Illuminate\Http\Request;
@@ -58,7 +58,7 @@ class ColorController extends Controller
 
     public function displaySpecificColor($id)
     {
-        return color::find($id);
+        return Color::find($id);
     }
 
     

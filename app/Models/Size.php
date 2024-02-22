@@ -15,6 +15,4 @@ public function color():BelongsTo{
 }    
 
 
-
-
 }

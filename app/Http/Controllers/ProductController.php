@@ -3,13 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Image;
-use App\Models\product_color;
-use App\Models\size;
+use App\Models\ProductColor;
+use App\Models\Size;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Product;
-use App\Models\ProductColor;
-use App\Models\color;
+use App\Models\Color;
 use Illuminate\Http\UploadedFile;
 use Carbon\Carbon;
 
@@ -147,7 +146,7 @@ class ProductController extends Controller
 
     public function displayAllProduct()
     {
-        $products = product::all();
+        $products = Product::all();
         return $products;
     }
 
@@ -169,7 +168,7 @@ class ProductController extends Controller
                     $color->sizes->pluck('size')->toArray();
 
                     $colorData[] = [
-                        'colorName' => color::find($color->color_id)->color,
+                        'colorName' =>  Color::find($color->color_id)->color,
 
                     ];
                 }
@@ -239,7 +238,7 @@ class ProductController extends Controller
                     $color->sizes->pluck('size')->toArray();
 
                     $colorData[] = [
-                        'colorName' => color::find($color->color_id)->color,
+                        'colorName' => Color::find($color->color_id)->color,
 
                     ];
 
